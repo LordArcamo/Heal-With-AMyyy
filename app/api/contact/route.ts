@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 import { Resend } from "resend"
 import { z } from "zod"
 
-const FROM = "Heal With Amy <noreply@healwithamy.com>"
+const FROM = "Heal With Amy <onboarding@resend.dev>"
 const TO = "amy@healwithamy.com"
 
 const contactSchema = z.object({

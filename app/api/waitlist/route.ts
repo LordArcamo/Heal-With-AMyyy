@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 import { Resend } from "resend"
 import { z } from "zod"
 
-const FROM = "Amy <noreply@healwithamy.com>"
+const FROM = "Amy <onboarding@resend.dev>"
 const MAILERLITE_FORM_URL =
   "https://assets.mailerlite.com/jsonp/2384701/forms/188646736711910524/subscribe"
 
