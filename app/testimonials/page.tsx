@@ -95,6 +95,63 @@ export default function TestimonialsPage() {
           </div>
         </section>
 
+        {/* Bhutan Section */}
+        <section className="bg-deep py-20 px-5 md:px-10">
+          <div className="max-w-[1100px] mx-auto">
+            <div className="text-center mb-4 fade-up">
+              <SectionLabel light>A Special Story</SectionLabel>
+              <h2 className="text-cream mt-2">
+                Healing at 10,000 Feet —<br />
+                <em className="text-gold-light italic">Paro Taksang (Tiger&apos;s Nest), Bhutan</em>
+              </h2>
+            </div>
+
+            <p className="font-serif text-xl md:text-3xl italic text-gold-light text-center leading-snug mb-6 fade-up">
+              &quot;Healing doesn&apos;t recognize borders, language, or culture. It simply flows where it&apos;s needed.&quot;
+            </p>
+
+            <p className="text-center max-w-[680px] mx-auto text-[15px] text-cream/65 leading-relaxed font-light mb-14 fade-up">
+              On our last day in Bhutan in April 2026, we made the challenging trek up to Tiger&apos;s Nest — one of the most sacred sites in Buddhism, perched 10,000 feet above the valley floor. What happened on that mountain, and in the days that preceded it, reminded me of exactly why I do this work.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              {/* Jambay */}
+              <div className="flex flex-col gap-5 fade-up">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bhutan-jambay-oZzmbRa3ReddBDkuWaobr7LjaKz2oe.jpeg"
+                  alt="Amy healing Jambay Wangchuk at Tiger's Nest, Bhutan"
+                  width={600}
+                  height={450}
+                  className="w-full aspect-[4/3] object-cover rounded-lg border border-gold/20"
+                />
+                <blockquote className="font-serif text-[17px] italic text-cream/80 leading-relaxed border-l-2 border-gold pl-5">
+                  &quot;Sooner Amy touched my knees, the thudding pain I had been cascaded, vanished instantly. For a moment, I could not believe that a simple touch could alleviate the nettlesome burden that I have been carrying all throughout. However, after few days, my pain came back but not as troublesome as it was before the touch. I am very happy, as well as lucky, to have come across Amy at the holy and secret Paro Taksang, Bhutan. It is truly blessing of Ugyen Guru Rinpochhey.&quot;
+                </blockquote>
+                <p className="text-[11px] uppercase tracking-[0.12em] text-gold-light font-medium">
+                  — Jambay Wangchuk, Bhutan
+                </p>
+              </div>
+
+              {/* Kuckchung */}
+              <div className="flex flex-col gap-5 fade-up">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bhutan-kuckchung-sgHgTJvgQWcdxN2rgacm4eyJEMXoiI.jpeg"
+                  alt="Amy healing KuckChung in Bhutan"
+                  width={600}
+                  height={450}
+                  className="w-full aspect-[4/3] object-cover rounded-lg border border-gold/20"
+                />
+                <p className="text-[15px] text-cream/75 leading-relaxed font-light italic">
+                  &quot;I met KuckChung while traveling in Bhutan — a woman who suffered a serious leg injury years ago and struggled so much with pain and mobility that her daughter had to help her out of bed every single morning. I sat with her for about 10 minutes and worked on her leg. She told me right away that her pain had decreased. The next morning, her daughter went to help her up — and she wasn&apos;t there. She had already gone out for a mile-long walk. By herself.&quot;
+                </p>
+                <p className="text-[11px] uppercase tracking-[0.12em] text-gold-light font-medium">
+                  — Amy, on KuckChung · Bhutan
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* More Testimonials */}
         <section className="px-5 md:px-10 pb-16">
           <div className="max-w-[1100px] mx-auto">
@@ -154,63 +211,6 @@ export default function TestimonialsPage() {
                 <div className="text-[11px] text-gold uppercase tracking-[0.1em] font-medium">
                   Linda Goldman
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Bhutan Section */}
-        <section className="bg-deep py-20 px-5 md:px-10">
-          <div className="max-w-[1100px] mx-auto">
-            <div className="text-center mb-4 fade-up">
-              <SectionLabel light>A Special Story</SectionLabel>
-              <h2 className="text-cream mt-2">
-                Healing at 10,000 Feet —<br />
-                <em className="text-gold-light italic">Paro Taksang (Tiger&apos;s Nest), Bhutan</em>
-              </h2>
-            </div>
-
-            <p className="font-serif text-xl md:text-3xl italic text-gold-light text-center leading-snug mb-6 fade-up">
-              &quot;Healing doesn&apos;t recognize borders, language, or culture. It simply flows where it&apos;s needed.&quot;
-            </p>
-
-            <p className="text-center max-w-[680px] mx-auto text-[15px] text-cream/65 leading-relaxed font-light mb-14 fade-up">
-              On our last day in Bhutan in April 2026, we made the challenging trek up to Tiger&apos;s Nest — one of the most sacred sites in Buddhism, perched 10,000 feet above the valley floor. What happened on that mountain, and in the days that preceded it, reminded me of exactly why I do this work.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {/* Jambay */}
-              <div className="flex flex-col gap-5 fade-up">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bhutan-jambay-oZzmbRa3ReddBDkuWaobr7LjaKz2oe.jpeg"
-                  alt="Amy healing Jambay Wangchuk at Tiger's Nest, Bhutan"
-                  width={600}
-                  height={450}
-                  className="w-full aspect-[4/3] object-cover rounded-lg border border-gold/20"
-                />
-                <blockquote className="font-serif text-[17px] italic text-cream/80 leading-relaxed border-l-2 border-gold pl-5">
-                  &quot;Sooner Amy touched my knees, the thudding pain I had been cascaded, vanished instantly. For a moment, I could not believe that a simple touch could alleviate the nettlesome burden that I have been carrying all throughout. However, after few days, my pain came back but not as troublesome as it was before the touch. I am very happy, as well as lucky, to have come across Amy at the holy and secret Paro Taksang, Bhutan. It is truly blessing of Ugyen Guru Rinpochhey.&quot;
-                </blockquote>
-                <p className="text-[11px] uppercase tracking-[0.12em] text-gold-light font-medium">
-                  — Jambay Wangchuk, Bhutan
-                </p>
-              </div>
-
-              {/* Kuckchung */}
-              <div className="flex flex-col gap-5 fade-up">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bhutan-kuckchung-sgHgTJvgQWcdxN2rgacm4eyJEMXoiI.jpeg"
-                  alt="Amy healing KuckChung in Bhutan"
-                  width={600}
-                  height={450}
-                  className="w-full aspect-[4/3] object-cover rounded-lg border border-gold/20"
-                />
-                <p className="text-[15px] text-cream/75 leading-relaxed font-light italic">
-                  &quot;I met KuckChung while traveling in Bhutan — a woman who suffered a serious leg injury years ago and struggled so much with pain and mobility that her daughter had to help her out of bed every single morning. I sat with her for about 10 minutes and worked on her leg. She told me right away that her pain had decreased. The next morning, her daughter went to help her up — and she wasn&apos;t there. She had already gone out for a mile-long walk. By herself.&quot;
-                </p>
-                <p className="text-[11px] uppercase tracking-[0.12em] text-gold-light font-medium">
-                  — Amy, on KuckChung · Bhutan
-                </p>
               </div>
             </div>
           </div>
