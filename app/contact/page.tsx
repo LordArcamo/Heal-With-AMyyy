@@ -16,14 +16,13 @@ export default function ContactPage() {
 
     const form = e.currentTarget
     const formData = new FormData(form)
+    const payload = Object.fromEntries(formData.entries())
 
     try {
-      const response = await fetch("https://formspree.io/f/mnjrlvja", {
+      const response = await fetch("/api/contact", {
         method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       })
 
       if (response.ok) {

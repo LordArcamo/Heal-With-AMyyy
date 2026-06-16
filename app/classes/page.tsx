@@ -9,6 +9,33 @@ import { CTABanner } from "@/components/ui-custom/cta-banner"
 
 export default function ClassesPage() {
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setLoading(true)
+
+    const formData = new FormData(e.currentTarget)
+    const email = String(formData.get("email") || "")
+
+    try {
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      })
+
+      if (response.ok) {
+        setSubmitted(true)
+      } else {
+        alert("Something went wrong. Please try again.")
+      }
+    } catch {
+      alert("Something went wrong. Please try again.")
+    }
+
+    setLoading(false)
+  }
 
   return (
     <>
@@ -202,30 +229,25 @@ export default function ClassesPage() {
                   <p className="text-[13px] text-cream/50 mb-6 font-light leading-relaxed">
                     The class launches winter 2026. Join the list and you&apos;ll hear first — with early access and your gift meditation.
                   </p>
-                  <form
-                    action="https://assets.mailerlite.com/jsonp/2384701/forms/188646736711910524/subscribe"
-                    method="post"
-                    onSubmit={() => setTimeout(() => setSubmitted(true), 500)}
-                  >
+                  <form onSubmit={handleSubmit}>
                     <div className="mb-6">
                       <label className="block text-[10px] tracking-[0.16em] uppercase text-gold-light mb-1.5 font-medium">
                         Your email
                       </label>
                       <input
                         type="email"
-                        name="fields[email]"
+                        name="email"
                         placeholder="you@example.com"
                         required
                         className="w-full p-3 px-4 bg-cream/7 border border-gold/25 rounded-md text-cream text-[14px] font-light placeholder:text-cream/30 outline-none focus:border-gold focus:bg-gold/8 transition-all"
                       />
                     </div>
-                    <input type="hidden" name="ml-submit" value="1" />
-                    <input type="hidden" name="anticsrf" value="true" />
                     <button
                       type="submit"
-                      className="w-full py-4 bg-gradient-to-br from-gold to-gold-light text-cream text-[12px] font-medium tracking-[0.16em] uppercase rounded transition-all hover:opacity-90"
+                      disabled={loading}
+                      className="w-full py-4 bg-gradient-to-br from-gold to-gold-light text-cream text-[12px] font-medium tracking-[0.16em] uppercase rounded transition-all hover:opacity-90 disabled:opacity-70"
                     >
-                      Yes, I want to awaken my healing potential
+                      {loading ? "Submitting..." : "Yes, I want to awaken my healing potential"}
                     </button>
                     <p className="text-[11px] text-cream/30 text-center mt-3">
                       No spam, ever. Just one email when the class opens — and your gift meditation right away.
