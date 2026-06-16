@@ -6,9 +6,20 @@ const FROM = "Heal With Amy <onboarding@resend.dev>"
 const TO = "amy@healwithamy.com"
 
 const contactSchema = z.object({
-  name: z.string().min(1, "Name is required").max(200),
-  email: z.string().email("A valid email is required"),
-  phone: z.string().max(50).optional().or(z.literal("")),
+  name: z.string().trim().min(2, "Please enter your name").max(200),
+  email: z.string().trim().email("A valid email is required").max(320),
+  phone: z
+    .string()
+    .max(20)
+    .optional()
+    .refine(
+      (v) =>
+        !v ||
+        (/^[\d\s()+.-]+$/.test(v) &&
+          (v.match(/\d/g) || []).length >= 7 &&
+          (v.match(/\d/g) || []).length <= 15),
+      { message: "Please enter a valid phone number" }
+    ),
   service: z.string().max(100).optional().or(z.literal("")),
   location: z.string().max(100).optional().or(z.literal("")),
   message: z.string().max(5000).optional().or(z.literal("")),

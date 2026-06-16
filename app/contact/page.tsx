@@ -6,15 +6,47 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { SectionLabel } from "@/components/ui-custom/section-label"
 
+type FieldErrors = { name?: string; email?: string; phone?: string }
+
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [phone, setPhone] = useState("")
+  const [errors, setErrors] = useState<FieldErrors>({})
+
+  function handlePhoneChange(e: React.ChangeEvent<HTMLInputElement>) {
+    // Allow only digits and common phone formatting characters — no letters.
+    const cleaned = e.target.value.replace(/[^\d\s()+.-]/g, "")
+    setPhone(cleaned)
+    if (errors.phone) setErrors((prev) => ({ ...prev, phone: undefined }))
+  }
+
+  function validate(form: HTMLFormElement): boolean {
+    const data = new FormData(form)
+    const name = String(data.get("name") || "").trim()
+    const email = String(data.get("email") || "").trim()
+    const phoneVal = String(data.get("phone") || "").trim()
+    const next: FieldErrors = {}
+
+    if (name.length < 2) next.name = "Please enter your name."
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+      next.email = "Please enter a valid email address."
+    if (phoneVal) {
+      const digits = (phoneVal.match(/\d/g) || []).length
+      if (digits < 7 || digits > 15)
+        next.phone = "Please enter a valid phone number (7–15 digits)."
+    }
+
+    setErrors(next)
+    return Object.keys(next).length === 0
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    const form = e.currentTarget
+    if (!validate(form)) return
     setLoading(true)
 
-    const form = e.currentTarget
     const formData = new FormData(form)
     const payload = Object.fromEntries(formData.entries())
 
@@ -150,7 +182,7 @@ export default function ContactPage() {
                     <p className="text-[13px] text-cream/50 mb-7 font-light">
                       Fill out the form and Amy will get back to you within 1–2 business days.
                     </p>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} noValidate>
                       <div className="mb-4">
                         <label className="block text-[10px] tracking-[0.16em] uppercase text-gold-light mb-1.5 font-medium">
                           Your Name
@@ -160,8 +192,19 @@ export default function ContactPage() {
                           name="name"
                           placeholder="First and last name"
                           required
-                          className="w-full p-3 px-4 bg-cream/7 border border-gold/25 rounded-md text-cream text-[14px] font-light placeholder:text-cream/30 outline-none focus:border-gold focus:bg-gold/8 transition-all"
+                          aria-invalid={errors.name ? true : undefined}
+                          onChange={() =>
+                            errors.name && setErrors((p) => ({ ...p, name: undefined }))
+                          }
+                          className={`w-full p-3 px-4 bg-cream/7 border rounded-md text-cream text-[14px] font-light placeholder:text-cream/30 outline-none focus:bg-gold/8 transition-all ${
+                            errors.name
+                              ? "border-red-400 focus:border-red-400"
+                              : "border-gold/25 focus:border-gold"
+                          }`}
                         />
+                        {errors.name && (
+                          <p className="text-[11px] text-red-400 mt-1.5">{errors.name}</p>
+                        )}
                       </div>
                       <div className="mb-4">
                         <label className="block text-[10px] tracking-[0.16em] uppercase text-gold-light mb-1.5 font-medium">
@@ -172,8 +215,20 @@ export default function ContactPage() {
                           name="email"
                           placeholder="you@example.com"
                           required
-                          className="w-full p-3 px-4 bg-cream/7 border border-gold/25 rounded-md text-cream text-[14px] font-light placeholder:text-cream/30 outline-none focus:border-gold focus:bg-gold/8 transition-all"
+                          autoComplete="email"
+                          aria-invalid={errors.email ? true : undefined}
+                          onChange={() =>
+                            errors.email && setErrors((p) => ({ ...p, email: undefined }))
+                          }
+                          className={`w-full p-3 px-4 bg-cream/7 border rounded-md text-cream text-[14px] font-light placeholder:text-cream/30 outline-none focus:bg-gold/8 transition-all ${
+                            errors.email
+                              ? "border-red-400 focus:border-red-400"
+                              : "border-gold/25 focus:border-gold"
+                          }`}
                         />
+                        {errors.email && (
+                          <p className="text-[11px] text-red-400 mt-1.5">{errors.email}</p>
+                        )}
                       </div>
                       <div className="mb-4">
                         <label className="block text-[10px] tracking-[0.16em] uppercase text-gold-light mb-1.5 font-medium">
@@ -182,9 +237,22 @@ export default function ContactPage() {
                         <input
                           type="tel"
                           name="phone"
+                          inputMode="tel"
+                          autoComplete="tel"
+                          maxLength={20}
+                          value={phone}
+                          onChange={handlePhoneChange}
                           placeholder="For call or text"
-                          className="w-full p-3 px-4 bg-cream/7 border border-gold/25 rounded-md text-cream text-[14px] font-light placeholder:text-cream/30 outline-none focus:border-gold focus:bg-gold/8 transition-all"
+                          aria-invalid={errors.phone ? true : undefined}
+                          className={`w-full p-3 px-4 bg-cream/7 border rounded-md text-cream text-[14px] font-light placeholder:text-cream/30 outline-none focus:bg-gold/8 transition-all ${
+                            errors.phone
+                              ? "border-red-400 focus:border-red-400"
+                              : "border-gold/25 focus:border-gold"
+                          }`}
                         />
+                        {errors.phone && (
+                          <p className="text-[11px] text-red-400 mt-1.5">{errors.phone}</p>
+                        )}
                       </div>
                       <div className="mb-4">
                         <label className="block text-[10px] tracking-[0.16em] uppercase text-gold-light mb-1.5 font-medium">
