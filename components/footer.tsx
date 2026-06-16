@@ -117,10 +117,10 @@ export function Footer() {
             </p>
             <p className="mt-1.5">
               <a
-                href="mailto:healwithamyo@gmail.com"
+                href="mailto:amy@healwithamy.com"
                 className="text-[13px] text-cream/50 font-light transition-colors hover:text-gold-light"
               >
-                healwithamyo@gmail.com
+                amy@healwithamy.com
               </a>
             </p>
             <p className="text-[13px] text-cream/50 font-light mt-1.5 leading-relaxed">

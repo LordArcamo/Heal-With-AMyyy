@@ -123,10 +123,10 @@ export default function ContactPage() {
                   Email
                 </span>
                 <a
-                  href="mailto:healwithamyo@gmail.com"
+                  href="mailto:amy@healwithamy.com"
                   className="text-[15px] text-medium font-light hover:text-gold transition-colors"
                 >
-                  healwithamyo@gmail.com
+                  amy@healwithamy.com
                 </a>
               </div>
 
