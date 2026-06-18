@@ -16,13 +16,15 @@ export default function ClassesPage() {
     setLoading(true)
 
     const formData = new FormData(e.currentTarget)
+    const name = String(formData.get("name") || "")
     const email = String(formData.get("email") || "")
+    const location = String(formData.get("location") || "")
 
     try {
       const response = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ name, email, location }),
       })
 
       if (response.ok) {
@@ -232,6 +234,18 @@ export default function ClassesPage() {
                   <form onSubmit={handleSubmit}>
                     <div className="mb-6">
                       <label className="block text-[10px] tracking-[0.16em] uppercase text-gold-light mb-1.5 font-medium">
+                        Your name
+                      </label>
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Jane Smith"
+                        required
+                        className="w-full p-3 px-4 bg-cream/7 border border-gold/25 rounded-md text-cream text-[14px] font-light placeholder:text-cream/30 outline-none focus:border-gold focus:bg-gold/8 transition-all"
+                      />
+                    </div>
+                    <div className="mb-6">
+                      <label className="block text-[10px] tracking-[0.16em] uppercase text-gold-light mb-1.5 font-medium">
                         Your email
                       </label>
                       <input
@@ -241,6 +255,22 @@ export default function ClassesPage() {
                         required
                         className="w-full p-3 px-4 bg-cream/7 border border-gold/25 rounded-md text-cream text-[14px] font-light placeholder:text-cream/30 outline-none focus:border-gold focus:bg-gold/8 transition-all"
                       />
+                    </div>
+                    <div className="mb-6">
+                      <label className="block text-[10px] tracking-[0.16em] uppercase text-gold-light mb-1.5 font-medium">
+                        Location
+                      </label>
+                      <select
+                        name="location"
+                        required
+                        className="w-full p-3 px-4 bg-cream/7 border border-gold/25 rounded-md text-cream text-[14px] font-light outline-none focus:border-gold focus:bg-gold/8 transition-all appearance-none"
+                      >
+                        <option value="">— Select —</option>
+                        <option value="virtual">Virtual / Online</option>
+                        <option value="easton-md">Easton, MD</option>
+                        <option value="sarasota-fl">Sarasota, FL</option>
+                        <option value="other">Other</option>
+                      </select>
                     </div>
                     <button
                       type="submit"

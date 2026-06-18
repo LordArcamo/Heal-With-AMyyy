@@ -208,7 +208,7 @@ export default function HomePage() {
         <section className="bg-deep py-14 px-5 md:px-10">
           <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <SectionLabel light>Coming Winter 2026</SectionLabel>
+              <SectionLabel light>Coming Soon</SectionLabel>
               <h2 className="text-cream mt-3 mb-4">
                 Awaken Your <em className="text-gold-light italic">Healing Potential</em>
               </h2>
