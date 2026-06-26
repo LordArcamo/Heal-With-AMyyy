@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { SectionLabel } from "@/components/ui-custom/section-label"
+import { executeRecaptcha } from "@/components/recaptcha"
 
 type FieldErrors = { name?: string; email?: string; phone?: string }
 
@@ -49,12 +50,13 @@ export default function ContactPage() {
 
     const formData = new FormData(form)
     const payload = Object.fromEntries(formData.entries())
+    const recaptchaToken = await executeRecaptcha("contact")
 
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({ ...payload, recaptchaToken }),
       })
 
       if (response.ok) {

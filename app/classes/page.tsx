@@ -6,6 +6,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { SectionLabel } from "@/components/ui-custom/section-label"
 import { CTABanner } from "@/components/ui-custom/cta-banner"
+import { executeRecaptcha } from "@/components/recaptcha"
 
 export default function ClassesPage() {
   const [submitted, setSubmitted] = useState(false)
@@ -19,12 +20,13 @@ export default function ClassesPage() {
     const name = String(formData.get("name") || "")
     const email = String(formData.get("email") || "")
     const location = String(formData.get("location") || "")
+    const recaptchaToken = await executeRecaptcha("waitlist")
 
     try {
       const response = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, location }),
+        body: JSON.stringify({ name, email, location, recaptchaToken }),
       })
 
       if (response.ok) {
@@ -57,8 +59,86 @@ export default function ClassesPage() {
           </p>
           <div className="inline-flex gap-3 px-5 py-2.5 border border-gold/30 rounded-full mt-7 fade-up">
             <span className="text-[11px] text-gold-light tracking-[0.12em] font-medium">
-              Launching Winter 2026
+              Coming Soon
             </span>
+          </div>
+        </section>
+
+        {/* Featured Upcoming In-Person Class */}
+        <section className="py-16 px-5 md:px-10 bg-warm-white">
+          <div className="max-w-[760px] mx-auto">
+            <div className="text-center mb-7 fade-up">
+              <SectionLabel>Upcoming In-Person Class</SectionLabel>
+            </div>
+            <div className="bg-deep rounded-2xl p-8 md:p-12 border border-gold/20 fade-up">
+              <div className="text-center">
+                <h2 className="text-cream text-[30px] md:text-[40px] leading-tight">
+                  Crystals, Chakras<br />
+                  <em className="text-gold-light italic">&amp; Your Inner Healer</em>
+                </h2>
+                <p className="font-serif italic text-lg text-cream/70 mt-3">
+                  A Beginner&apos;s Journey into Energy Healing
+                </p>
+              </div>
+
+              <div className="flex items-center gap-4 my-8">
+                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+                <div className="w-1.5 h-1.5 rounded-full bg-gold" />
+                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+              </div>
+
+              <div className="text-center space-y-1">
+                <p className="text-cream font-serif text-[19px] md:text-[22px]">
+                  Sunday, August 16 · 2:30 – 4:30 PM
+                </p>
+                <p className="text-cream/80 text-[15px]">
+                  Zebra Gallery · Downtown Easton, MD
+                </p>
+                <p className="text-cream/45 text-[12px] tracking-wide">
+                  Across from the Tidewater Inn
+                </p>
+              </div>
+
+              <div className="mt-8 grid gap-3 max-w-[440px] mx-auto">
+                {[
+                  "Choose your crystal pendulum to keep — included",
+                  "Energy activation & so much more",
+                ].map((item) => (
+                  <div key={item} className="flex gap-3 items-start">
+                    <span className="text-gold-light text-[13px] mt-0.5 flex-shrink-0">&#10022;</span>
+                    <span className="text-[14px] text-cream/75 font-light leading-relaxed">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex items-center justify-center gap-8 mt-9">
+                <div className="text-center">
+                  <div className="text-[10px] tracking-[0.16em] uppercase text-gold-light mb-1">
+                    Limited To
+                  </div>
+                  <div className="text-cream font-serif text-2xl">10 spots</div>
+                </div>
+                <div className="w-px h-10 bg-gold/25" />
+                <div className="text-center">
+                  <div className="text-[10px] tracking-[0.16em] uppercase text-gold-light mb-1">
+                    Investment
+                  </div>
+                  <div className="text-cream font-serif text-2xl">$95</div>
+                </div>
+              </div>
+
+              <div className="mt-9 text-center">
+                <a
+                  href="mailto:amy@healwithamy.com?subject=Reserve%20my%20spot%20%E2%80%94%20Crystals%2C%20Chakras%20%26%20Your%20Inner%20Healer"
+                  className="inline-block py-4 px-8 bg-gradient-to-br from-gold to-gold-light text-cream text-[12px] font-medium tracking-[0.16em] uppercase rounded transition-all hover:opacity-90"
+                >
+                  Reserve Your Spot with Amy
+                </a>
+                <p className="text-[12px] text-cream/45 mt-3">amy@healwithamy.com</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -229,7 +309,7 @@ export default function ClassesPage() {
                     Be the first to know<br />when doors open
                   </h3>
                   <p className="text-[13px] text-cream/50 mb-6 font-light leading-relaxed">
-                    The class launches winter 2026. Join the list and you&apos;ll hear first — with early access and your gift meditation.
+                    The class is coming soon. Join the list and you&apos;ll hear first — with early access and your gift meditation.
                   </p>
                   <form onSubmit={handleSubmit}>
                     <div className="mb-6">

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import { Resend } from "resend"
 import { z } from "zod"
+import { verifyRecaptcha } from "@/lib/recaptcha"
 
 const FROM = "Amy <onboarding@resend.dev>"
 const MAILERLITE_FORM_URL =
@@ -11,6 +12,7 @@ const waitlistSchema = z.object({
   name: z.string().trim().min(1, "Please enter your name").max(200),
   email: z.string().email("A valid email is required"),
   location: z.string().trim().min(1, "Please select a location").max(100),
+  recaptchaToken: z.string().nullish(),
 })
 
 function confirmationHtml(name: string) {
@@ -19,7 +21,7 @@ function confirmationHtml(name: string) {
     <h2 style="color: #7C4DBA; font-weight: normal;">You're on the list ✨</h2>
     <p>Hi ${name},</p>
     <p>Thank you for joining the waitlist for <em>Awaken Your Healing Potential</em>.</p>
-    <p>You'll be the first to know when doors open (launching Winter 2026). And as promised,
+    <p>You'll be the first to know when doors open (coming soon). And as promised,
     here's your gift meditation — a guided energy activation to open and clear your field:</p>
     <p>
       <a href="${MEDITATION_URL}" style="display: inline-block; padding: 12px 24px; background: #7C4DBA; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold;">
@@ -43,7 +45,7 @@ Hi ${name},
 
 Thank you for joining the waitlist for "Awaken Your Healing Potential".
 
-You'll be the first to know when doors open (launching Winter 2026). And as promised, here's your gift meditation:
+You'll be the first to know when doors open (coming soon). And as promised, here's your gift meditation:
 ${MEDITATION_URL}
 
 With love,
@@ -68,7 +70,15 @@ export async function POST(request: Request) {
     )
   }
 
-  const { name, email, location } = parsed.data
+  const { name, email, location, recaptchaToken } = parsed.data
+
+  const human = await verifyRecaptcha(recaptchaToken ?? undefined)
+  if (!human) {
+    return NextResponse.json(
+      { error: "Could not verify you're human. Please try again." },
+      { status: 400 }
+    )
+  }
 
   // 1) Subscribe to MailerLite (Class Waitlist group via the public embed form).
   try {

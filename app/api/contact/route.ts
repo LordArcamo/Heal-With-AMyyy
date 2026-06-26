@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server"
 import { Resend } from "resend"
 import { z } from "zod"
+import { verifyRecaptcha } from "@/lib/recaptcha"
 
 const FROM = "Heal With Amy <onboarding@resend.dev>"
 const TO = "amy@healwithamy.com"
@@ -23,6 +24,7 @@ const contactSchema = z.object({
   service: z.string().max(100).optional().or(z.literal("")),
   location: z.string().max(100).optional().or(z.literal("")),
   message: z.string().max(5000).optional().or(z.literal("")),
+  recaptchaToken: z.string().nullish(),
 })
 
 function escapeHtml(value: string) {
@@ -58,7 +60,16 @@ export async function POST(request: Request) {
     )
   }
 
-  const { name, email, phone, service, location, message } = parsed.data
+  const { name, email, phone, service, location, message, recaptchaToken } =
+    parsed.data
+
+  const human = await verifyRecaptcha(recaptchaToken ?? undefined)
+  if (!human) {
+    return NextResponse.json(
+      { error: "Could not verify you're human. Please try again." },
+      { status: 400 }
+    )
+  }
 
   const rows = [
     ["Name", name],

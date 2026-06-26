@@ -176,7 +176,7 @@ export default function AboutPage() {
             <SectionLabel>Ready to Learn?</SectionLabel>
             <h2 className="mt-2">Join the waitlist for Amy&apos;s upcoming class</h2>
             <p className="text-[15px] text-medium leading-relaxed font-light mt-4 mb-7">
-              <em className="italic">Awaken Your Healing Potential</em> — launching winter 2026. You were born with the ability to heal. Learn to access it.
+              <em className="italic">Awaken Your Healing Potential</em> — coming soon. You were born with the ability to heal. Learn to access it.
             </p>
             <div className="flex gap-3.5 justify-center flex-wrap">
               <Button href="/classes" variant="dark">
