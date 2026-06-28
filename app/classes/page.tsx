@@ -362,6 +362,27 @@ export default function ClassesPage() {
                     <p className="text-[11px] text-cream/30 text-center mt-3">
                       No spam, ever. Just one email when the class opens — and your gift meditation right away.
                     </p>
+                    <p className="text-[10px] text-cream/25 text-center mt-2 leading-relaxed">
+                      This site is protected by reCAPTCHA and the Google{" "}
+                      <a
+                        href="https://policies.google.com/privacy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-cream/40"
+                      >
+                        Privacy Policy
+                      </a>{" "}
+                      and{" "}
+                      <a
+                        href="https://policies.google.com/terms"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-cream/40"
+                      >
+                        Terms of Service
+                      </a>{" "}
+                      apply.
+                    </p>
                   </form>
                 </>
               ) : (

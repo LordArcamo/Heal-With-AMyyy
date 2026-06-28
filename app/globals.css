@@ -157,3 +157,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--gold-light);
 }
+
+/* Hide the floating reCAPTCHA v3 badge. Per Google's terms, the reCAPTCHA
+   branding/links must instead be disclosed in text near the forms. */
+.grecaptcha-badge {
+  visibility: hidden;
+}
