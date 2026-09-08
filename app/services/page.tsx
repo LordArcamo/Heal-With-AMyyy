@@ -7,9 +7,9 @@ import { CTABanner } from "@/components/ui-custom/cta-banner"
 import { Button } from "@/components/ui-custom/button-custom"
 
 export const metadata: Metadata = {
-  title: "Services & Pricing — Energy Healing Sessions & Mentorship | Heal With Amy",
+  title: "Services & Pricing — Energy Healing Sessions | Heal With Amy",
   description:
-    "Amy offers intuitive energy healing sessions and experiential classes to help you feel grounded, clear, and connected. Healing sessions are complimentary. Classes and mentorship available. Easton MD, Sarasota FL, and virtually.",
+    "Amy offers intuitive energy healing sessions to help you feel grounded, clear, and connected. Healing sessions are complimentary — love offering welcome. Available in Easton MD, Sarasota FL, and virtually worldwide.",
 }
 
 const chakras = [
@@ -96,6 +96,45 @@ export default function ServicesPage() {
           </div>
         </div>
 
+        {/* Additional Services */}
+        <div className="max-w-[1100px] mx-auto px-5 md:px-10 pb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Remote Session */}
+            <div className="bg-warm-white border border-gold/15 rounded-xl p-9 flex flex-col gap-4 fade-up">
+              <SectionLabel>Remote Session</SectionLabel>
+              <h3>Remote Healing Session</h3>
+              <div className="font-serif text-[22px] text-gold italic">
+                Complimentary — Love Offering Welcome
+              </div>
+              <p className="text-[14px] text-medium leading-relaxed font-light">
+                Experience Amy&apos;s healing work from anywhere in the world. Remote sessions carry the same depth and intention as in-person work — distance is no barrier to energy healing.
+              </p>
+              <div className="flex gap-3 flex-wrap mt-auto pt-2">
+                <Button href="/contact" variant="dark">
+                  Book a Session
+                </Button>
+              </div>
+            </div>
+
+            {/* Custom Healing Video */}
+            <div className="bg-warm-white border border-gold/15 rounded-xl p-9 flex flex-col gap-4 fade-up">
+              <SectionLabel>Custom Healing Video</SectionLabel>
+              <h3>Personalized Healing Video</h3>
+              <div className="font-serif text-[22px] text-gold italic">
+                $50
+              </div>
+              <p className="text-[14px] text-medium leading-relaxed font-light">
+                A custom healing video created just for you — to revisit and return to whenever you need it. Email Amy for more information.
+              </p>
+              <div className="flex gap-3 flex-wrap mt-auto pt-2">
+                <Button href="mailto:amy@healwithamy.com" variant="outline">
+                  Email for More Info
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Chakras Section */}
         <section className="bg-deep py-20 px-5 md:px-10">
           <div className="max-w-[1100px] mx-auto">
@@ -139,109 +178,11 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Mentorship */}
-        <section className="py-20 px-5 md:px-10">
-          <div className="max-w-[1100px] mx-auto">
-            <div className="text-center max-w-[580px] mx-auto fade-up">
-              <SectionLabel>Ongoing Support</SectionLabel>
-              <h2 className="mt-2">1:1 Mentorship Paths</h2>
-              <p className="text-[15px] text-medium mt-3 font-light leading-relaxed">
-                For those ready to go deeper — developing your intuition, working through ongoing challenges, and building a lasting energy practice.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-              {/* Alignment Path */}
-              <div className="bg-warm-white border border-gold/15 rounded-xl p-9 flex flex-col gap-4 fade-up">
-                <SectionLabel>Alignment Path</SectionLabel>
-                <h3>$222 / month</h3>
-                <p className="text-[14px] text-medium font-light leading-relaxed">
-                  Perfect for those beginning their energy journey or seeking regular monthly guidance and support.
-                </p>
-                <ul className="flex flex-col gap-2">
-                  {[
-                    "One 60-minute session per month",
-                    "Personalized integration practices",
-                    "Chakra awareness & balancing",
-                    "Grounding and protection techniques",
-                    "1–2 between-session check-ins",
-                    "Tools like pendulums introduced",
-                  ].map((item) => (
-                    <li
-                      key={item}
-                      className="text-[13px] text-medium font-light flex items-start gap-2"
-                    >
-                      <span className="text-gold text-[10px] mt-1">&#10022;</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <Button href="/contact" variant="outline" className="self-start mt-2">
-                  Get Started
-                </Button>
-              </div>
-
-              {/* Expansion Path */}
-              <div className="bg-warm-white border border-gold rounded-xl p-9 flex flex-col gap-4 relative fade-up">
-                <SectionLabel>Expansion Path</SectionLabel>
-                <h3>$333 / month</h3>
-                <p className="text-[14px] text-medium font-light leading-relaxed">
-                  Full-access mentorship for those who want Amy&apos;s guidance available whenever they need it most.
-                </p>
-                <ul className="flex flex-col gap-2">
-                  {[
-                    "One 60-minute session per month",
-                    "Unlimited between-session questions",
-                    "Voice or text support",
-                    "24–48 hour response time",
-                    "In-depth personalized guidance",
-                    "All Alignment Path features included",
-                  ].map((item) => (
-                    <li
-                      key={item}
-                      className="text-[13px] text-medium font-light flex items-start gap-2"
-                    >
-                      <span className="text-gold text-[10px] mt-1">&#10022;</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <Button href="/contact" variant="dark" className="self-start mt-2">
-                  Get Started
-                </Button>
-              </div>
-            </div>
-
-            {/* Is This for You? */}
-            <div className="mt-14 p-10 bg-warm-white border border-gold/15 rounded-xl fade-up">
-              <h3 className="text-center mb-7">Mentorship may be right for you if…</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {[
-                  "You're new to energy work and want a knowledgeable guide",
-                  "You're navigating a major life transition",
-                  "You want to develop your own intuitive awareness",
-                  "You're an experienced practitioner seeking deeper work",
-                  "You prefer ongoing support over standalone sessions",
-                  "You want practical, at-home tools to supplement sessions",
-                ].map((item) => (
-                  <div key={item} className="flex gap-2.5 items-start">
-                    <span className="text-gold text-[12px] mt-0.5">&#10022;</span>
-                    <p className="text-[14px] text-medium font-light">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <p className="text-[12px] text-medium mt-8 leading-relaxed font-light border-t border-gold/15 pt-6">
-              <strong className="text-deep">Important note:</strong> Energy Healing with Amy offers spiritual and energetic services only. These services are not massage therapy, bodywork, or medical care. They do not diagnose, treat, or cure any physical or mental health condition. Always consult a qualified healthcare provider for medical concerns.
-            </p>
-          </div>
-        </section>
-
         {/* CTA */}
         <CTABanner
-          title="Not sure which path is right for you?"
-          subtitle="Reach out — Amy would love to chat and help you figure out the best fit."
-          primaryButton={{ text: "Contact Amy", href: "/contact" }}
+          title="Ready to experience a session?"
+          subtitle="Reach out — Amy would love to connect and answer any questions you have."
+          primaryButton={{ text: "Book a Session", href: "/contact" }}
           secondaryButton={{ text: "Call 610-608-9347", href: "tel:+16106089347" }}
         />
       </main>

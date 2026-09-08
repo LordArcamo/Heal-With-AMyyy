@@ -1,9 +1,7 @@
 import Image from "next/image"
-import Link from "next/link"
 import type { Metadata } from "next"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { SectionLabel } from "@/components/ui-custom/section-label"
 import { Button } from "@/components/ui-custom/button-custom"
 
 export const metadata: Metadata = {
@@ -168,24 +166,54 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+
+          {/* YouTube */}
+          <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6 md:gap-15 py-14 border-t border-gold/15">
+            <div className="text-[10px] font-medium tracking-[0.2em] uppercase text-gold pt-1.5">
+              On YouTube
+            </div>
+            <div>
+              <h2 className="mb-5">Healing, one minute at a time</h2>
+              <p className="text-[15px] text-medium leading-relaxed font-light mb-4">
+                Amy shares her work weekly on YouTube at{" "}
+                <a
+                  href="https://www.youtube.com/@EnergyHealingWithAmy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gold hover:underline"
+                >
+                  @EnergyHealingWithAmy
+                </a>
+                . Her <em className="italic">One Minute of Healing</em> series brings short, accessible healing moments straight to you — and she also goes live for free mini-healing sessions, where she does quick energy healings for viewers as an introduction to her work.
+              </p>
+              <p className="text-[15px] text-medium leading-relaxed font-light mb-6">
+                The live sessions are completely free — an open door into the healing work, no commitment required.
+              </p>
+              <a
+                href="https://www.youtube.com/@EnergyHealingWithAmy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-6 py-3 bg-deep text-cream text-[11px] font-medium tracking-[0.14em] uppercase rounded transition-all hover:bg-gold hover:text-deep hover:-translate-y-0.5"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
+                </svg>
+                Subscribe on YouTube
+              </a>
+            </div>
+          </div>
         </div>
 
-        {/* Classes Teaser */}
+        {/* CTA */}
         <section className="bg-gold/5 border-t border-gold/15 py-20 px-5 md:px-10">
           <div className="max-w-[600px] mx-auto text-center">
-            <SectionLabel>Ready to Learn?</SectionLabel>
-            <h2 className="mt-2">Join the waitlist for Amy&apos;s upcoming class</h2>
+            <h2 className="mt-2">Ready to experience a session?</h2>
             <p className="text-[15px] text-medium leading-relaxed font-light mt-4 mb-7">
-              <em className="italic">Awaken Your Healing Potential</em> — launching winter 2026. You were born with the ability to heal. Learn to access it.
+              Sessions are complimentary — in person in Easton, MD or Sarasota, FL, or virtually anywhere in the world.
             </p>
-            <div className="flex gap-3.5 justify-center flex-wrap">
-              <Button href="/classes" variant="dark">
-                Join the Waitlist
-              </Button>
-              <Button href="/contact" variant="outline">
-                Book a Session
-              </Button>
-            </div>
+            <Button href="/contact" variant="dark">
+              Book a Session
+            </Button>
           </div>
         </section>
       </main>

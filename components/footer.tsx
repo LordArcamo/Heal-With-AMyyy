@@ -45,7 +45,6 @@ export function Footer() {
                 { href: "/", label: "Home" },
                 { href: "/about", label: "About Amy" },
                 { href: "/services", label: "Services" },
-                { href: "/classes", label: "Classes" },
                 { href: "/testimonials", label: "Testimonials" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
@@ -76,28 +75,14 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services"
+                <a
+                  href="https://www.youtube.com/@EnergyHealingWithAmy"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-[13px] text-cream/50 font-light transition-colors hover:text-gold-light"
                 >
-                  Alignment Path — $222/mo
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-[13px] text-cream/50 font-light transition-colors hover:text-gold-light"
-                >
-                  Expansion Path — $333/mo
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/classes"
-                  className="text-[13px] text-cream/50 font-light transition-colors hover:text-gold-light"
-                >
-                  Awaken Your Healing Potential
-                </Link>
+                  YouTube — @EnergyHealingWithAmy
+                </a>
               </li>
             </ul>
           </div>

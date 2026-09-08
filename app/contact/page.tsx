@@ -266,15 +266,6 @@ export default function ContactPage() {
                           <option value="healing-session">
                             Custom Healing Session (complimentary)
                           </option>
-                          <option value="alignment-path">
-                            Alignment Path Mentorship ($222/mo)
-                          </option>
-                          <option value="expansion-path">
-                            Expansion Path Mentorship ($333/mo)
-                          </option>
-                          <option value="class-waitlist">
-                            Awaken Your Healing Potential (class waitlist)
-                          </option>
                           <option value="not-sure">Not sure yet — just exploring</option>
                         </select>
                       </div>

@@ -18,12 +18,12 @@ const jost = Jost({
 
 export const metadata: Metadata = {
   title: 'Energy Healing with Amy — Reconnect with Your Energy',
-  description: 'Amy offers intuitive energy healing sessions and experiential classes to help you feel grounded, clear, and connected. Sessions in Easton MD, Sarasota FL, and virtually.',
+  description: 'Amy offers intuitive energy healing sessions to help you feel grounded, clear, and connected. Sessions in Easton MD, Sarasota FL, and virtually worldwide.',
   keywords: ['energy healing', 'reiki', 'chakra balancing', 'spiritual healing', 'Amy Ostroff', 'Easton MD', 'Sarasota FL'],
   authors: [{ name: 'Amy Ostroff' }],
   openGraph: {
     title: 'Energy Healing with Amy',
-    description: 'Intuitive energy healing sessions and experiential classes to help you feel grounded, clear, and deeply connected to yourself.',
+    description: 'Intuitive energy healing sessions to help you feel grounded, clear, and deeply connected to yourself.',
     type: 'website',
     locale: 'en_US',
   },

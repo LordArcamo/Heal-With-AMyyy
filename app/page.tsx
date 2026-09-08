@@ -15,9 +15,6 @@ export default function HomePage() {
         <section className="min-h-[calc(100vh-72px)] py-20 px-5 md:px-10">
           <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-15 items-center">
             <div className="flex flex-col gap-5 fade-up">
-              <p className="text-[11px] font-medium tracking-[0.18em] uppercase text-gold">
-                Energy Healing · Mentorship · Transformation
-              </p>
               <h1 className="fade-up-delay-1">
                 Reconnect <em className="text-gold italic">with your</em> energy.
               </h1>
@@ -25,7 +22,7 @@ export default function HomePage() {
                 Amy is a Life Path 33 Master Healer with 25+ years of experience — including training under world-renowned healer Charlie Goldsmith, as featured on TLC&apos;s &quot;The Healer.&quot;
               </div>
               <p className="font-serif text-medium italic leading-relaxed text-lg max-w-[520px] fade-up-delay-2">
-                Intuitive energy healing sessions and experiential classes to help you feel grounded, clear, and deeply connected to yourself.
+                Intuitive energy healing sessions to help you feel grounded, clear, and deeply connected to yourself.
               </p>
               <div className="flex gap-3.5 flex-wrap mt-2 fade-up-delay-3">
                 <Button href="/contact" variant="dark">
@@ -71,7 +68,7 @@ export default function HomePage() {
                   "Deep Relaxation",
                   "Grounding & Clarity",
                   "Intuitive Healing",
-                  "Spiritual Mentorship",
+                  "Inner Peace",
                 ].map((item) => (
                   <span key={`${i}-${item}`} className="flex items-center">
                     <span className="text-[10px] font-medium tracking-[0.18em] uppercase text-gold-light px-7">
@@ -138,13 +135,12 @@ export default function HomePage() {
           <div className="max-w-[1100px] mx-auto">
             <div className="text-center max-w-[560px] mx-auto mb-4">
               <SectionLabel>What Amy Offers</SectionLabel>
-              <h2>Choose your healing path</h2>
+              <h2>One-on-one healing</h2>
               <p className="text-[15px] text-medium mt-3 font-light">
                 Every session is uniquely tailored to where you are right now.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-              {/* Service Card 1 */}
+            <div className="mt-12 max-w-[560px] mx-auto">
               <div className="bg-warm-white border border-gold/15 rounded-xl p-9 flex flex-col gap-4 relative transition-all hover:-translate-y-1 hover:shadow-lg">
                 <div className="font-serif text-5xl font-light text-gold/20 leading-none">
                   01
@@ -166,86 +162,56 @@ export default function HomePage() {
                   </a>
                 </p>
               </div>
-
-              {/* Service Card 2 */}
-              <div className="bg-warm-white border border-gold/15 rounded-xl p-9 flex flex-col gap-4 relative transition-all hover:-translate-y-1 hover:shadow-lg">
-                <div className="font-serif text-5xl font-light text-gold/20 leading-none">
-                  02
-                </div>
-                <h3 className="text-deep -mt-2">Alignment Path</h3>
-                <p className="text-[14px] text-medium leading-relaxed font-light">
-                  Monthly 1:1 mentorship to deepen your connection to intuition and energy. Includes chakra awareness, grounding practices, personalized integration exercises, and between-session check-ins.
-                </p>
-                <div className="font-serif text-xl text-gold italic">
-                  $222 / month
-                </div>
-                <Button href="/services" variant="outline" className="self-start">
-                  Learn More
-                </Button>
-              </div>
-
-              {/* Service Card 3 */}
-              <div className="bg-gradient-to-br from-warm-white to-gold/5 border border-gold rounded-xl p-9 flex flex-col gap-4 relative transition-all hover:-translate-y-1 hover:shadow-lg">
-                <div className="font-serif text-5xl font-light text-gold/20 leading-none">
-                  03
-                </div>
-                <h3 className="text-deep -mt-2">Expansion Path</h3>
-                <p className="text-[14px] text-medium leading-relaxed font-light">
-                  Full-access mentorship with one monthly session plus ongoing voice and text support. Receive in-depth personalized guidance whenever you need it — Amy responds within 24–48 hours.
-                </p>
-                <div className="font-serif text-xl text-gold italic">
-                  $333 / month
-                </div>
-                <Button href="/services" variant="outline" className="self-start">
-                  Learn More
-                </Button>
-              </div>
             </div>
           </div>
         </section>
 
-        {/* Classes Banner */}
+        {/* YouTube Section */}
         <section className="bg-deep py-14 px-5 md:px-10">
           <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <SectionLabel light>Coming Soon</SectionLabel>
+              <SectionLabel light>Watch & Heal</SectionLabel>
               <h2 className="text-cream mt-3 mb-4">
-                Awaken Your <em className="text-gold-light italic">Healing Potential</em>
+                Amy heals live <em className="text-gold-light italic">on YouTube</em>
               </h2>
               <p className="text-[15px] text-cream/60 leading-relaxed font-light mb-6">
-                You were born with the ability to heal. Learn to access it. Join the waitlist for Amy&apos;s upcoming energy healing class and be the first to know when doors open.
+                Catch her weekly <em className="italic text-cream/80">One Minute of Healing</em> series and free live mini-healing sessions — quick energy healings for viewers, completely free, as an introduction to her work.
               </p>
-              <Button href="/classes" variant="gold">
-                Join the Waitlist
-              </Button>
+              <a
+                href="https://www.youtube.com/@EnergyHealingWithAmy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-6 py-3 bg-gold text-deep text-[11px] font-medium tracking-[0.14em] uppercase rounded transition-all hover:bg-gold-light hover:-translate-y-0.5"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
+                </svg>
+                Subscribe on YouTube
+              </a>
             </div>
             <div className="flex flex-col gap-3.5">
               {[
                 {
-                  icon: "hands",
-                  title: "Hand Activation Techniques",
-                  desc: "Feel healing energy working in real time.",
+                  icon: "▶",
+                  title: "One Minute of Healing",
+                  desc: "A weekly video series — short, accessible healing moments you can come back to anytime.",
                 },
                 {
-                  icon: "spiral",
-                  title: "Chakra Anatomy & Healing",
-                  desc: "Read, clear, and balance your energy centers.",
+                  icon: "✦",
+                  title: "Live Mini-Healing Sessions",
+                  desc: "Amy goes live and does quick energy healings for viewers right on stream — free, as an intro to her work.",
                 },
                 {
-                  icon: "crystal",
-                  title: "Pendulum Work & Guided Meditation",
-                  desc: "Practical tools you'll use every day.",
+                  icon: "∞",
+                  title: "Always Free",
+                  desc: "No cost, no commitment. Just an open door into the healing work.",
                 },
               ].map((item) => (
                 <div
                   key={item.title}
                   className="flex gap-3.5 items-start p-4 bg-cream/5 rounded-lg border border-gold/15"
                 >
-                  <span className="text-xl">
-                    {item.icon === "hands" && "🤲"}
-                    {item.icon === "spiral" && "🌀"}
-                    {item.icon === "crystal" && "🔮"}
-                  </span>
+                  <span className="text-gold text-lg flex-shrink-0 mt-0.5">{item.icon}</span>
                   <div>
                     <strong className="block text-cream text-[13px] mb-0.5">
                       {item.title}
@@ -286,8 +252,8 @@ export default function HomePage() {
                 },
                 {
                   num: "04",
-                  title: "Ongoing support",
-                  desc: "With mentorship paths, Amy supports your journey with education, tools, and consistent guidance between sessions.",
+                  title: "Ongoing connection",
+                  desc: "Stay connected through Amy's YouTube channel for free weekly healing content and live sessions — or reach out directly any time.",
                 },
               ].map((step) => (
                 <div key={step.num} className="flex flex-col gap-3">
