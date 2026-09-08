@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { SectionLabel } from "@/components/ui-custom/section-label"
+import { executeRecaptcha } from "@/components/recaptcha"
 
 type FieldErrors = { name?: string; email?: string; phone?: string }
 
@@ -49,12 +50,13 @@ export default function ContactPage() {
 
     const formData = new FormData(form)
     const payload = Object.fromEntries(formData.entries())
+    const recaptchaToken = await executeRecaptcha("contact")
 
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({ ...payload, recaptchaToken }),
       })
 
       if (response.ok) {
@@ -303,6 +305,27 @@ export default function ContactPage() {
                       </button>
                       <p className="text-[11px] text-cream/30 text-center mt-3">
                         Amy typically responds within 1–2 business days.
+                      </p>
+                      <p className="text-[10px] text-cream/25 text-center mt-2 leading-relaxed">
+                        This site is protected by reCAPTCHA and the Google{" "}
+                        <a
+                          href="https://policies.google.com/privacy"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-cream/40"
+                        >
+                          Privacy Policy
+                        </a>{" "}
+                        and{" "}
+                        <a
+                          href="https://policies.google.com/terms"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-cream/40"
+                        >
+                          Terms of Service
+                        </a>{" "}
+                        apply.
                       </p>
                     </form>
                   </>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond, Jost } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { RecaptchaScript } from '@/components/recaptcha'
 import './globals.css'
 
 const cormorant = Cormorant_Garamond({
@@ -38,6 +39,7 @@ export default function RootLayout({
     <html lang="en" className={`${cormorant.variable} ${jost.variable}`}>
       <body className="font-sans antialiased bg-cream text-deep">
         {children}
+        <RecaptchaScript />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
