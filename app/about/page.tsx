@@ -5,9 +5,9 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui-custom/button-custom"
 
 export const metadata: Metadata = {
-  title: "About Amy — Energy Healing Practitioner Since 1998 | Heal With Amy",
+  title: "About Amy — Energy Healing with Amy | Heal With Amy",
   description:
-    "Amy is a Life Path 33 Master Healer with 25+ years of energy healing experience. Trained under world-renowned healer Charlie Goldsmith, as featured on TLC's The Healer. Serving Easton MD, Sarasota FL, and virtually.",
+    "Amy is a Life Path 33 Master Healer whose personal journey with energy healing began more than 25 years ago. With recent training under world-renowned healer Charlie Goldsmith, as featured on TLC's The Healer. Serving Easton MD, Sarasota FL, and virtually.",
 }
 
 export default function AboutPage() {
@@ -26,7 +26,7 @@ export default function AboutPage() {
                 The healer <em className="text-gold italic">behind the work</em>
               </h1>
               <p className="font-serif text-lg md:text-xl italic text-medium leading-relaxed fade-up">
-                Amy is a Life Path 33 Master Healer with 25+ years of energy healing experience. A practice born from her own transformation. Trained under world-renowned healer Charlie Goldsmith, as featured on TLC&apos;s &quot;The Healer.&quot;
+                Amy is a Life Path 33 Master Healer whose connection to energy healing began more than 25 years ago. What started as a personal exploration eventually became a calling to help others. She has also trained under world-renowned healer Charlie Goldsmith, as featured on TLC&apos;s &quot;The Healer.&quot;
               </p>
               <div className="flex flex-wrap gap-10 mt-2 fade-up">
                 <div>
@@ -34,15 +34,15 @@ export default function AboutPage() {
                     1998
                   </strong>
                   <span className="text-[12px] text-medium font-light">
-                    Year Amy began her practice
+                    Her energy healing journey began
                   </span>
                 </div>
                 <div>
                   <strong className="block font-serif text-4xl font-light text-gold leading-none">
-                    25+
+                    33
                   </strong>
                   <span className="text-[12px] text-medium font-light">
-                    Years of dedicated healing work
+                    Life Path — Master Healer
                   </span>
                 </div>
                 <div>
@@ -58,7 +58,7 @@ export default function AboutPage() {
             <div className="fade-up">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2867-R9jXT5IXFP8m4iJWV2GjNBIbmrh0Iu.jpg"
-                alt="Amy — Energy Healer since 1998"
+                alt="Amy Ostroff of Heal With Amy"
                 width={500}
                 height={667}
                 className="w-full aspect-[3/4] object-cover object-top rounded-sm"
@@ -81,7 +81,7 @@ export default function AboutPage() {
                 Amy&apos;s path into energy healing wasn&apos;t a career choice — it was a calling. Beginning with Usui Reiki in 1998, she initially practiced purely for her own wellness, navigating years of intensive inner work to overcome her own trauma. That process didn&apos;t just heal her; it amplified her innate ability to channel healing energy for others.
               </p>
               <p className="text-[15px] text-medium leading-relaxed font-light">
-                Some things about who we are can&apos;t be taught — they&apos;re simply part of how we came into this world. Amy is a Life Path 33, known in numerology as the Master Healer. She didn&apos;t seek that out; she just kept following what felt true, and the healing work kept finding her. Twenty-five years later, she understands it as confirmation of something she always sensed: this is exactly what she&apos;s here to do.
+                Some things about who we are can&apos;t be taught — they&apos;re simply part of how we came into this world. Amy is a Life Path 33, known in numerology as the Master Healer. She didn&apos;t seek that out; she just kept following what felt true, and the healing work kept finding her. Years later, she understands it as confirmation of something she always sensed: this is exactly what she&apos;s here to do.
               </p>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function AboutPage() {
             <div>
               <h2 className="mb-5">Trained under the best</h2>
               <p className="text-[15px] text-medium leading-relaxed font-light mb-4">
-                Amy had the rare privilege of training under Charlie Goldsmith, a world-renowned energy healer known for producing remarkable results with clients worldwide — and featured on TLC&apos;s <em className="italic text-medium">&quot;The Healer.&quot;</em> This training deepened Amy&apos;s practice and helped her develop her own signature hands-on technique — one that incorporates elements of Reiki but goes far deeper, including astral body work.
+                Amy had the rare privilege of training under Charlie Goldsmith, a world-renowned energy healer known for producing remarkable results with clients worldwide — and featured on TLC&apos;s <em className="italic text-medium">&quot;The Healer.&quot;</em> That training deepened Amy&apos;s understanding of energy work and helped her learn to step out of the way and allow the energy to flow. She sees herself as a vessel rather than the source — trusting the energy to go where it is needed.
               </p>
               <div className="mt-6 rounded-lg overflow-hidden">
                 <Image
@@ -116,7 +116,7 @@ export default function AboutPage() {
             <div>
               <h2 className="mb-5">Where energy meets soulful care</h2>
               <p className="text-[15px] text-medium leading-relaxed font-light mb-4">
-                Amy&apos;s work addresses the full spectrum of physical and emotional wellness. Her technique aims to soothe stress, insomnia, and physical ailments by identifying and releasing the energetic blockages that prevent you from feeling your best.
+                Amy&apos;s work addresses the full spectrum of physical and emotional wellness. She holds a compassionate intention for each person&apos;s wellbeing and allows the healing energy to flow — trusting it to move to where it is most needed.
               </p>
               <p className="text-[15px] text-medium leading-relaxed font-light mb-4">
                 Sessions are available in person in Easton, MD and Sarasota, FL — and virtually for clients anywhere in the world.
@@ -142,7 +142,7 @@ export default function AboutPage() {
                   },
                   {
                     title: "Intuitive & deeply personalized",
-                    desc: "No two sessions are alike. Amy reads your energy and follows where the healing is needed — there are no rigid scripts or one-size-fits-all formulas.",
+                    desc: "No two sessions are alike. Amy remains open to what the energy reveals and follows where it leads — there are no rigid scripts or one-size-fits-all formulas.",
                   },
                   {
                     title: "Safe & sacred space",
@@ -209,7 +209,7 @@ export default function AboutPage() {
           <div className="max-w-[600px] mx-auto text-center">
             <h2 className="mt-2">Ready to experience a session?</h2>
             <p className="text-[15px] text-medium leading-relaxed font-light mt-4 mb-7">
-              Sessions are complimentary — in person in Easton, MD or Sarasota, FL, or virtually anywhere in the world.
+              Available in person in Easton, MD or Sarasota, FL, or virtually anywhere in the world. Energy Healing Sessions are $100; Rapid Relief remote sessions are $50. If the fee is ever a hardship, please reach out — Amy is happy to discuss options.
             </p>
             <Button href="/contact" variant="dark">
               Book a Session

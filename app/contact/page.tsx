@@ -95,7 +95,7 @@ export default function ContactPage() {
           <div className="max-w-[800px] mx-auto">
             <div className="bg-gold/5 border border-gold/20 rounded-lg py-6 px-8 text-center fade-up">
               <p className="text-[15px] text-medium font-light leading-relaxed">
-                <strong className="text-deep">Sessions are complimentary</strong> — any love offering is gratefully received but never expected. Amy schedules sessions flexibly around her availability in Easton MD, Sarasota FL, and virtually worldwide. The easiest way to book is to reach out below or call/text directly.
+                <strong className="text-deep">Energy Healing Sessions are $100</strong>; Rapid Relief remote sessions are $50. Amy schedules sessions flexibly around her availability in Easton MD, Sarasota FL, and virtually worldwide. The easiest way to book is to reach out below or call/text directly. <em className="not-italic">If the fee is a hardship, please mention it — Amy is always happy to discuss options.</em>
               </p>
             </div>
           </div>
@@ -166,8 +166,8 @@ export default function ContactPage() {
               <div className="mt-2 p-5 bg-warm-white border border-gold/15 rounded-lg">
                 <h4 className="text-base mb-2">Custom Healing Session</h4>
                 <p className="text-[13px] text-medium font-light leading-relaxed mb-4">
-                  Complimentary — Love Offering Welcome<br />
-                  ~45 minutes · In-person or virtual
+                  $100 per session · ~45 minutes<br />
+                  In-person or virtual
                 </p>
                 <p className="text-[12px] text-medium font-light leading-relaxed">
                   Amy does not keep fixed hours — she schedules based on mutual availability. Fill out the form or reach out directly and she&apos;ll be in touch within 1–2 business days.
@@ -266,7 +266,10 @@ export default function ContactPage() {
                         >
                           <option value="">— Select a service —</option>
                           <option value="healing-session">
-                            Custom Healing Session (complimentary)
+                            Energy Healing Session ($100)
+                          </option>
+                          <option value="rapid-relief">
+                            Rapid Relief Session ($50)
                           </option>
                           <option value="not-sure">Not sure yet — just exploring</option>
                         </select>

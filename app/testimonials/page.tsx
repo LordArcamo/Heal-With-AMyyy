@@ -221,7 +221,7 @@ export default function TestimonialsPage() {
           <div className="max-w-[1100px] mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               {[
-                { value: "25+", label: "Years of healing practice" },
+                { value: "25+", label: "Years since my journey began" },
                 { value: "2", label: "Sessions for John Bunting's pain relief" },
                 { value: "3", label: "Locations: MD, FL & Virtual" },
                 { value: "∞", label: "Personalized to your energy" },

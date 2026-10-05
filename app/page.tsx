@@ -19,7 +19,7 @@ export default function HomePage() {
                 Reconnect <em className="text-gold italic">with your</em> energy.
               </h1>
               <div className="text-[13px] text-medium leading-relaxed font-light p-4 pl-5 border-l-2 border-gold bg-gold/5 rounded-r-md fade-up-delay-2">
-                Amy is a Life Path 33 Master Healer with 25+ years of experience — including training under world-renowned healer Charlie Goldsmith, as featured on TLC&apos;s &quot;The Healer.&quot;
+                Amy is a Life Path 33 Master Healer whose journey with energy healing began more than 25 years ago — with recent training under world-renowned healer Charlie Goldsmith, as featured on TLC&apos;s &quot;The Healer.&quot;
               </div>
               <p className="font-serif text-medium italic leading-relaxed text-lg max-w-[520px] fade-up-delay-2">
                 Intuitive energy healing sessions to help you feel grounded, clear, and deeply connected to yourself.
@@ -39,14 +39,14 @@ export default function HomePage() {
             <div className="relative fade-up-delay-2 lg:order-none order-first">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2867-R9jXT5IXFP8m4iJWV2GjNBIbmrh0Iu.jpg"
-                alt="Amy — Energy Healer since 1998"
+                alt="Amy Ostroff of Heal With Amy"
                 width={600}
                 height={700}
                 className="w-full h-[400px] lg:h-[600px] object-cover object-top rounded-sm"
                 priority
               />
               <div className="absolute bottom-6 left-3 lg:left-[-20px] bg-warm-white border border-gold/20 p-3.5 px-5 rounded-lg shadow-lg">
-                <p className="text-[11px] text-medium font-light">Healing since</p>
+                <p className="text-[11px] text-medium font-light">Journey began</p>
                 <strong className="block text-[22px] font-serif text-deep font-normal">
                   1998
                 </strong>
@@ -118,7 +118,7 @@ export default function HomePage() {
               <SectionLabel>About Amy</SectionLabel>
               <h2>A healer who has walked the path of transformation herself.</h2>
               <p className="text-[15px] text-medium leading-relaxed font-light">
-                Amy began her journey with Usui Reiki in 1998 — not as a practitioner, but as someone seeking her own healing. Through years of intensive inner work and training under world-renowned healer Charlie Goldsmith, she developed her own profound hands-on technique that goes far beyond traditional Reiki.
+                Amy began her journey with Usui Reiki in 1998 — not as a practitioner, but as someone seeking her own healing. Through years of inner work and training, Amy came to understand her role as a vessel for healing energy — allowing it to flow through her and trusting it to go where it is needed.
               </p>
               <p className="text-[15px] text-medium leading-relaxed font-light">
                 Today, Amy helps clients release energetic blockages, soothe chronic stress, and reconnect with their deepest selves — in person and virtually.
@@ -147,10 +147,10 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-deep -mt-2">Custom Healing Session</h3>
                 <p className="text-[14px] text-medium leading-relaxed font-light">
-                  One-on-one energy healing designed to support emotional release, balance, and deep relaxation. Amy&apos;s signature technique combines Reiki elements with astral body work for profound results.
+                  One-on-one energy healing designed to support emotional release, balance, and deep relaxation. Amy serves as a vessel for the healing energy — drawing on Reiki and other energetic practices including astral body work — and trusts it to flow where it is most needed.
                 </p>
                 <div className="font-serif text-xl text-gold italic">
-                  Complimentary — Love Offering Welcome
+                  $100 per session &middot; Rapid Relief $50
                 </div>
                 <Button href="/contact" variant="dark" className="self-start">
                   Book a Session
@@ -160,6 +160,9 @@ export default function HomePage() {
                   <a href="tel:+16106089347" className="text-gold hover:underline">
                     610-608-9347
                   </a>
+                </p>
+                <p className="text-[12px] text-medium font-light">
+                  If the fee is a hardship, please reach out directly — Amy is happy to discuss options.
                 </p>
               </div>
             </div>
@@ -243,7 +246,7 @@ export default function HomePage() {
                 {
                   num: "02",
                   title: "Your healing session",
-                  desc: "In a safe, calm space, Amy uses her unique hands-on technique to identify and dissolve energetic blockages throughout your body.",
+                  desc: "In a safe, calm space, Amy holds a compassionate intention for your session and allows the healing energy to flow freely — trusting it to reach wherever it is most needed.",
                 },
                 {
                   num: "03",

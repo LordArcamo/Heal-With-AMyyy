@@ -9,7 +9,7 @@ import { Button } from "@/components/ui-custom/button-custom"
 export const metadata: Metadata = {
   title: "Services & Pricing — Energy Healing Sessions | Heal With Amy",
   description:
-    "Amy offers intuitive energy healing sessions to help you feel grounded, clear, and connected. Healing sessions are complimentary — love offering welcome. Available in Easton MD, Sarasota FL, and virtually worldwide.",
+    "Amy offers intuitive energy healing sessions to help you feel grounded, clear, and connected. Energy Healing Sessions are $100; Rapid Relief remote sessions are $50. Available in Easton MD, Sarasota FL, and virtually worldwide.",
 }
 
 const chakras = [
@@ -58,13 +58,13 @@ export default function ServicesPage() {
               <SectionLabel>Signature Offering</SectionLabel>
               <h2 className="mt-2">Custom Healing Session</h2>
               <div className="font-serif text-[22px] text-gold italic mt-3">
-                Complimentary — Love Offering Welcome
+                $100 per session
               </div>
               <p className="text-[15px] text-medium leading-relaxed font-light mt-4">
-                Amy&apos;s one-on-one healing sessions are unlike anything else you&apos;ll experience. Working with her signature technique — an evolution of Usui Reiki that incorporates astral body work — she identifies and dissolves the energetic blockages keeping you from feeling your best.
+                Amy&apos;s one-on-one healing sessions are unlike anything else you&apos;ll experience. Drawing on Reiki and other energetic practices, including astral body work, Amy allows the healing energy to flow through her and trusts it to go where it is most needed.
               </p>
               <p className="text-[15px] text-medium leading-relaxed font-light mt-4">
-                Sessions are deeply intuitive and personalized. Amy follows the energy, going exactly where healing is needed. Each session lasts approximately 45 minutes and is available in person in Easton, MD, Sarasota, FL, or virtually anywhere in the world. Sessions are offered freely — any love offering is gratefully received but never expected.
+                Sessions are deeply intuitive and personalized. Amy follows the energy, going exactly where healing is needed. Each session lasts approximately 45 minutes and is available in person in Easton, MD, Sarasota, FL, or virtually anywhere in the world.
               </p>
               <ul className="flex flex-col gap-2 mt-5">
                 {[
@@ -99,15 +99,15 @@ export default function ServicesPage() {
         {/* Additional Services */}
         <div className="max-w-[1100px] mx-auto px-5 md:px-10 pb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Remote Session */}
+            {/* Rapid Relief */}
             <div className="bg-warm-white border border-gold/15 rounded-xl p-9 flex flex-col gap-4 fade-up">
-              <SectionLabel>Remote Session</SectionLabel>
-              <h3>Remote Healing Session</h3>
+              <SectionLabel>Rapid Relief</SectionLabel>
+              <h3>Rapid Relief Session</h3>
               <div className="font-serif text-[22px] text-gold italic">
-                Complimentary — Love Offering Welcome
+                $50
               </div>
               <p className="text-[14px] text-medium leading-relaxed font-light">
-                Experience Amy&apos;s healing work from anywhere in the world. Remote sessions carry the same depth and intention as in-person work — distance is no barrier to energy healing.
+                A focused, shorter remote session offering targeted energetic support — available from anywhere in the world. Distance is no barrier to energy healing, and these sessions carry the same depth of intention as Amy&apos;s full sessions.
               </p>
               <div className="flex gap-3 flex-wrap mt-auto pt-2">
                 <Button href="/contact" variant="dark">
@@ -133,6 +133,12 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
+          <div className="mt-10 py-6 px-8 bg-gold/5 border border-gold/15 rounded-xl text-center fade-up">
+            <p className="text-[14px] text-medium leading-relaxed font-light">
+              <strong className="text-deep">Healing should be accessible to everyone.</strong>{" "}
+              Finances should never stand between you and support. If the session fee is a hardship, please reach out to Amy directly — she is always happy to discuss options and find a way to work with you.
+            </p>
+          </div>
         </div>
 
         {/* Chakras Section */}
@@ -146,7 +152,7 @@ export default function ServicesPage() {
                   At the core of Amy&apos;s healing work is an awareness of the body&apos;s seven major energy centers — the chakras. Each one governs different aspects of your physical, emotional, and spiritual wellbeing. When a chakra is blocked or out of balance, it can manifest as pain, anxiety, fatigue, or a feeling of being stuck.
                 </p>
                 <p className="text-[15px] text-cream/60 leading-relaxed font-light mt-3">
-                  Amy&apos;s sessions identify which centers need attention and restore the natural flow of energy throughout the body. This is not textbook theory — it is hands-on, felt work that clients describe as immediately tangible.
+                  In each session, Amy allows the energy to move and reveal where attention is needed, supporting a more natural flow of energy. This is not textbook theory — it is felt, living work that clients describe as immediately tangible.
                 </p>
               </div>
               <div className="fade-up">
