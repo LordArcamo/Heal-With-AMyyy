@@ -107,11 +107,11 @@ export default function HomePage() {
           <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-15 items-center">
             <div>
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7n5g6w49r5rmy0cx27jty7vjqr_result_0.JPEG-ruoWJ8EiIGGDl1bfNCO74GdgU7akjB.jpeg"
-                alt="Amy performing a custom healing session"
+                src="/amy-portrait-lavender.jpg"
+                alt="Amy Ostroff of Heal With Amy"
                 width={600}
                 height={450}
-                className="w-full aspect-[4/3] object-cover object-top rounded"
+                className="w-full aspect-[4/3] object-cover object-center rounded"
               />
             </div>
             <div className="flex flex-col gap-5">

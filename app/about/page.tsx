@@ -57,11 +57,11 @@ export default function AboutPage() {
             </div>
             <div className="fade-up">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2867-R9jXT5IXFP8m4iJWV2GjNBIbmrh0Iu.jpg"
+                src="/amy-portrait-lavender.jpg"
                 alt="Amy Ostroff of Heal With Amy"
                 width={500}
                 height={667}
-                className="w-full aspect-[3/4] object-cover object-top rounded-sm"
+                className="w-full aspect-[3/4] object-cover object-center rounded-sm"
                 priority
               />
             </div>
